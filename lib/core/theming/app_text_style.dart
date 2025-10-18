@@ -24,10 +24,10 @@ abstract class AppTextStyle {
     fontWeight: FontWeight.w700,
     color: AppColor.blackColor,
   );
-  static TextStyle font16W700 = TextStyle(
+  static TextStyle font16W700White = TextStyle(
     fontSize: 16.0.sp,
     fontWeight: FontWeight.w700,
-    color: AppColor.blackColor,
+    color: AppColor.whiteColor,
   );
   static TextStyle font20W700 = TextStyle(
     fontSize: 20.0.sp,
