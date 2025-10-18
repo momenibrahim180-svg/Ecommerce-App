@@ -1,3 +1,5 @@
+import 'package:ecommerce_youtube/core/routing/app_router.dart';
+import 'package:ecommerce_youtube/core/routing/routes.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
@@ -12,6 +14,8 @@ class EcommerceApp extends StatelessWidget {
       splitScreenMode: true,
       builder: (_, child) {
         return MaterialApp(
+          initialRoute: Routes.login,
+          onGenerateRoute: AppRouter.onGenerateRoute,
           debugShowCheckedModeBanner: false,
           title: 'Ecommerce App',
           theme: ThemeData(
