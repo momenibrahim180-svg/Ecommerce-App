@@ -1,7 +1,7 @@
+import 'package:ecommerce_youtube/core/helpers/extensions.dart';
 import 'package:ecommerce_youtube/core/theming/app_color.dart';
 import 'package:ecommerce_youtube/core/theming/app_text_style.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 class AppTextFormField extends StatelessWidget {
   final TextEditingController controller;
@@ -30,7 +30,7 @@ class AppTextFormField extends StatelessWidget {
     return Container(
       decoration: BoxDecoration(
         color: AppColor.whiteColor,
-        borderRadius: BorderRadius.circular(10.0.r),
+        borderRadius: 10.radius,
         boxShadow: [
           BoxShadow(
             color: AppColor.greyColor.withValues(alpha: 0.1),
@@ -45,7 +45,7 @@ class AppTextFormField extends StatelessWidget {
         obscureText: obscureText,
         readOnly: readOnly,
         validator: validator,
-        
+
         decoration: InputDecoration(
           labelText: labelText,
           hintText: hintText,
@@ -69,7 +69,7 @@ class AppTextFormField extends StatelessWidget {
 
   OutlineInputBorder _buildOutLineInputBorder({required Color borderColor}) {
     return OutlineInputBorder(
-      borderRadius: BorderRadius.circular(10.0.r),
+      borderRadius: 10.radius,
       borderSide: BorderSide(color: borderColor),
     );
   }

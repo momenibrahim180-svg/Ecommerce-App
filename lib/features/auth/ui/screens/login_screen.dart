@@ -2,6 +2,7 @@ import 'package:ecommerce_youtube/core/helpers/extensions.dart';
 import 'package:ecommerce_youtube/core/theming/app_color.dart';
 import 'package:ecommerce_youtube/core/theming/app_text_style.dart';
 import 'package:ecommerce_youtube/core/widgets/app_button.dart';
+import 'package:ecommerce_youtube/core/widgets/app_padding.dart';
 import 'package:ecommerce_youtube/core/widgets/app_text_form_field.dart';
 import 'package:flutter/material.dart';
 
@@ -26,7 +27,7 @@ class _LoginScreenState extends State<LoginScreen> {
     return Scaffold(
       body: SafeArea(
         child: SingleChildScrollView(
-          padding: EdgeInsets.symmetric(vertical: 27.0, horizontal: 16),
+          padding:paddingSymmetric(16, 27),
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
