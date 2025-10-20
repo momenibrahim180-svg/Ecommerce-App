@@ -1,4 +1,5 @@
 import 'package:ecommerce_youtube/core/helpers/extensions.dart';
+import 'package:ecommerce_youtube/core/routing/routes.dart';
 import 'package:ecommerce_youtube/core/theming/app_color.dart';
 import 'package:ecommerce_youtube/core/theming/app_text_style.dart';
 import 'package:ecommerce_youtube/core/widgets/app_button.dart';
@@ -27,7 +28,7 @@ class _LoginScreenState extends State<LoginScreen> {
     return Scaffold(
       body: SafeArea(
         child: SingleChildScrollView(
-          padding:paddingSymmetric(16, 27),
+          padding: paddingSymmetric(16, 27),
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
@@ -49,7 +50,12 @@ class _LoginScreenState extends State<LoginScreen> {
                 hintText: '(+20)   _ _ _ _ _ _ _ _ _ _',
               ),
               104.height,
-              AppButton(text: 'Login'),
+              AppButton(
+                text: 'Login',
+                onPressed: () {
+                  Navigator.pushNamed(context, Routes.otp);
+                },
+              ),
             ],
           ),
         ),
