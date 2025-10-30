@@ -3,7 +3,7 @@ import 'package:flutter/widgets.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 abstract class AppTextStyle {
-  static TextStyle font12W400 = TextStyle(
+  static TextStyle font12W400MainColor = TextStyle(
     fontSize: 12.0.sp,
     fontWeight: FontWeight.w400,
     color: AppColor.mainColor,
@@ -21,6 +21,11 @@ abstract class AppTextStyle {
 
   static TextStyle font15W700 = TextStyle(
     fontSize: 15.0.sp,
+    fontWeight: FontWeight.w700,
+    color: AppColor.blackColor,
+  );
+  static TextStyle font16W700Black = TextStyle(
+    fontSize: 16.0.sp,
     fontWeight: FontWeight.w700,
     color: AppColor.blackColor,
   );
