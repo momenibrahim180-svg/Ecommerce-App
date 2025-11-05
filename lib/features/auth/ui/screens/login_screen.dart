@@ -1,3 +1,4 @@
+import 'package:easy_localization/easy_localization.dart';
 import 'package:ecommerce_youtube/core/helpers/extensions.dart';
 import 'package:ecommerce_youtube/core/routing/routes.dart';
 import 'package:ecommerce_youtube/core/theming/app_color.dart';
@@ -5,6 +6,7 @@ import 'package:ecommerce_youtube/core/theming/app_text_style.dart';
 import 'package:ecommerce_youtube/core/widgets/app_button.dart';
 import 'package:ecommerce_youtube/core/widgets/app_padding.dart';
 import 'package:ecommerce_youtube/core/widgets/app_text_form_field.dart';
+import 'package:ecommerce_youtube/features/auth/ui/widgets/lang_icon.dart';
 import 'package:flutter/material.dart';
 
 class LoginScreen extends StatefulWidget {
@@ -32,18 +34,20 @@ class _LoginScreenState extends State<LoginScreen> {
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
-              Text('Login', style: AppTextStyle.font24W700),
+              LangIcon(),
+              15.height,
+              Text('login'.tr(), style: AppTextStyle.font24W700),
               23.height,
-              Text('Welcome back !', style: AppTextStyle.font20W700),
+              Text('welcome_back'.tr(), style: AppTextStyle.font20W700),
               8.height,
               Text(
-                'To keep connected with us please login to yor account ',
+                'login_message'.tr(),
                 style: AppTextStyle.font14W700.copyWith(
                   color: AppColor.blackColor.withValues(alpha: 0.70),
                 ),
               ),
               35.height,
-              Text('Phone number', style: AppTextStyle.font15W700),
+              Text('phone_number'.tr(), style: AppTextStyle.font15W700),
               8.height,
               AppTextFormField(
                 controller: _phoneController,
@@ -51,7 +55,7 @@ class _LoginScreenState extends State<LoginScreen> {
               ),
               104.height,
               AppButton(
-                text: 'Login',
+                text: 'login',
                 onPressed: () {
                   Navigator.pushNamed(context, Routes.otp);
                 },

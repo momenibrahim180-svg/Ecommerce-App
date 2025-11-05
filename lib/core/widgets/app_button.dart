@@ -1,3 +1,4 @@
+import 'package:easy_localization/easy_localization.dart';
 import 'package:ecommerce_youtube/core/theming/app_color.dart';
 import 'package:ecommerce_youtube/core/theming/app_text_style.dart';
 import 'package:flutter/material.dart';
@@ -29,7 +30,7 @@ class AppButton extends StatelessWidget {
             borderRadius: BorderRadius.circular(12.0.r),
           ),
         ),
-        child: Text(text, style: AppTextStyle.font16W700White),
+        child: Text(text.tr(), style: AppTextStyle.font16W700White),
       ),
     );
   }
