@@ -1,3 +1,4 @@
+import 'package:easy_localization/easy_localization.dart';
 import 'package:ecommerce_youtube/core/routing/app_router.dart';
 import 'package:ecommerce_youtube/core/routing/routes.dart';
 import 'package:flutter/material.dart';
@@ -17,6 +18,10 @@ class EcommerceApp extends StatelessWidget {
           initialRoute: Routes.login,
           onGenerateRoute: AppRouter.onGenerateRoute,
           debugShowCheckedModeBanner: false,
+          localizationsDelegates: context.localizationDelegates,
+          supportedLocales: context.supportedLocales,
+          locale: context.locale,
+          
           title: 'Ecommerce App',
           theme: ThemeData(
             textTheme: Typography.englishLike2018.apply(fontSizeFactor: 1.sp),
