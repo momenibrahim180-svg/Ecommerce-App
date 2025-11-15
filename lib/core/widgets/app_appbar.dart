@@ -1,3 +1,4 @@
+import 'package:easy_localization/easy_localization.dart';
 import 'package:ecommerce_youtube/core/helpers/extensions.dart';
 import 'package:ecommerce_youtube/core/theming/app_color.dart';
 import 'package:ecommerce_youtube/core/theming/app_text_style.dart';
@@ -33,7 +34,7 @@ class AppAppBar extends StatelessWidget {
           top: 0.0,
           child: Center(
             child: Text(
-              title,
+              title.tr(),
               textAlign: TextAlign.center,
               style: AppTextStyle.font24W700,
             ),

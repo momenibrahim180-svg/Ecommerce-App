@@ -7,6 +7,7 @@ import 'package:ecommerce_youtube/core/widgets/app_button.dart';
 import 'package:ecommerce_youtube/core/widgets/app_padding.dart';
 import 'package:ecommerce_youtube/core/widgets/app_text_form_field.dart';
 import 'package:ecommerce_youtube/features/auth/ui/widgets/lang_icon.dart';
+import 'package:ecommerce_youtube/generated/locale_keys.g.dart';
 import 'package:flutter/material.dart';
 
 class LoginScreen extends StatefulWidget {
@@ -36,18 +37,18 @@ class _LoginScreenState extends State<LoginScreen> {
             children: [
               LangIcon(),
               15.height,
-              Text('login'.tr(), style: AppTextStyle.font24W700),
+              Text(LocaleKeys.login.tr(), style: AppTextStyle.font24W700),
               23.height,
-              Text('welcome_back'.tr(), style: AppTextStyle.font20W700),
+              Text(LocaleKeys.welcome_back.tr(), style: AppTextStyle.font20W700),
               8.height,
               Text(
-                'login_message'.tr(),
+                LocaleKeys.login_message.tr(),
                 style: AppTextStyle.font14W700.copyWith(
                   color: AppColor.blackColor.withValues(alpha: 0.70),
                 ),
               ),
               35.height,
-              Text('phone_number'.tr(), style: AppTextStyle.font15W700),
+              Text(LocaleKeys.phone_number.tr(), style: AppTextStyle.font15W700),
               8.height,
               AppTextFormField(
                 controller: _phoneController,
@@ -55,7 +56,7 @@ class _LoginScreenState extends State<LoginScreen> {
               ),
               104.height,
               AppButton(
-                text: 'login',
+                text: LocaleKeys.login,
                 onPressed: () {
                   Navigator.pushNamed(context, Routes.otp);
                 },
