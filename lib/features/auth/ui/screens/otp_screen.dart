@@ -7,7 +7,6 @@ import 'package:ecommerce_youtube/core/widgets/app_button.dart';
 import 'package:ecommerce_youtube/core/widgets/app_padding.dart';
 import 'package:ecommerce_youtube/features/auth/ui/widgets/otp_form_field.dart';
 import 'package:ecommerce_youtube/features/auth/ui/widgets/resend_code_widget.dart';
-import 'package:ecommerce_youtube/generated/locale_keys.g.dart';
 import 'package:flutter/material.dart';
 
 class OtpScreen extends StatelessWidget {
@@ -21,10 +20,10 @@ class OtpScreen extends StatelessWidget {
           padding: paddingHorizontal(16),
           child: Column(
             children: [
-              AppAppBar(title: LocaleKeys.otp_verfication),
+              AppAppBar(title: 'otp_verfication'),
               42.height,
               Text(
-                LocaleKeys.please_enter_4_digit_code.tr(),
+                'please_enter_4_digit_code'.tr(),
                 style: AppTextStyle.font16W700Black.copyWith(
                   color: AppColor.blackColor.withValues(alpha: 0.7),
                 ),
@@ -34,7 +33,7 @@ class OtpScreen extends StatelessWidget {
               16.height,
               ResendCodeWidget(),
               82.height,
-              AppButton(text: LocaleKeys.verify, onPressed: () {}),
+              AppButton(text: 'verify', onPressed: () {}),
             ],
           ),
         ),
