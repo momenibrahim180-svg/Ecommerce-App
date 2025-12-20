@@ -6,7 +6,7 @@ import 'package:flutter/material.dart';
 
 class AppAppBar extends StatelessWidget {
   final String title;
-  const AppAppBar({super.key,required this.title});
+  const AppAppBar({super.key, required this.title});
 
   @override
   Widget build(BuildContext context) {
@@ -22,7 +22,9 @@ class AppAppBar extends StatelessWidget {
                   side: BorderSide(color: AppColor.greyColor.withAlpha(90)),
                 ),
               ),
-              onPressed: () {},
+              onPressed: () {
+                Navigator.pop(context);
+              },
               icon: Icon(Icons.arrow_back),
             ),
           ],
